@@ -1,13 +1,17 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import Hero from './sections/Hero';
+import Nav from './sections/Nav';
+import ComingSoon from './sections/ComingSoon';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
 	return (
 		<main>
-			<div>
-				<h1 className='text-emerald-600 text-5xl'>Welcome to GSAP and GTA Animation with React!</h1>
-			</div>
+			<Nav />
+			<Hero />
+			<ComingSoon />
 		</main>
 	);
 };
