@@ -1,4 +1,5 @@
-import React from 'react';
+import gsap from 'gsap'
+import ComingSoon from './ComingSoon';
 
 const Hero = () => {
 	return (
@@ -19,6 +20,8 @@ const Hero = () => {
       <div className="fake-logo-wrapper">
         <img src="/images/big-hero-text.svg" alt="" className='overlay-logo' />
       </div>
+
+      <ComingSoon />
 		</section>
 	);
 };
