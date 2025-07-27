@@ -13,7 +13,7 @@ const ComingSoon = () => {
         </div>
         <div className="flex-center gap-10">
           <img src="/images/ps-logo.svg" alt="ps-logo"  className='md:w-32 w-20'/>
-          <img src="/images/x.svg" alt="x-logo"  className='md:w-52 w-20'/>
+          <img src="/images/x-logo.svg" alt="x-logo"  className='md:w-52 w-20'/>
         </div>
       </div>
     </section>
