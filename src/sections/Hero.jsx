@@ -14,23 +14,23 @@ const Hero = () => {
 			maskSize: initialMaskSize,
 		});
 
-		gsap.set('.mask-logo', { marginTop: '-100vh', opacity: 0 });
+		gsap.set('.mask-logo', { marginTop: '-100vh', opacity: 0 }); //hide mask-logo
 
-		gsap.set('.entrance-message', { marginTop: '0vh' });
+		gsap.set('.entrance-message', { marginTop: '0vh' }); //reset entrance message position
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
-				trigger: '.hero-section',
-				start: 'top top',
-				scrub: 2.5,
-				end: '+=200%',
-				pin: true,
+				trigger: '.hero-section', //which section to trigger the animation
+				start: 'top top', //when the animation should start
+				scrub: 2.5, //smoothy delay
+				end: '+=200%', // when the animation should end 2 ta sectionni oladi
+				pin: true, //pin the section while scrolling, freezes the trigger element in place while things animated
 			},
 		});
 
 		tl.to('.fade-out', { opacity: 0, ease: 'power1.inOut' })
-			.to('.scale-out', { scale: 1, ease: 'power1.inOut' })
-			.to('.mask-wrapper', { maskSize, ease: 'power1.inOut' }, '<')
+			.to('.scale-out', { scale: 1, ease: 'power1.inOut' }) //125% dan 100% ga qaytvotti scale scroll qilinganda
+			.to('.mask-wrapper', { maskSize, ease: 'power1.inOut' }, '<') // '<' means start at the same time as previous animation
 			.to('.mask-wrapper', { opacity: 0 })
 			.to(
 				'.overlay-logo',
@@ -57,16 +57,19 @@ const Hero = () => {
 	return (
 		<section className="hero-section">
 			<div className="size-full mask-wrapper">
+				{/* grand theft auto */}
 				<img
 					src="/images/hero-bg.webp"
 					alt="background"
-					className="scale-out"
+					className="scale-out "
 				/>
+				{/* qiz bn bola backgroundi */}
 				<img
 					src="/images/hero-text.webp"
 					alt="hero-logo"
 					className="title-logo fade-out"
 				/>
+				{/* grand theft auto yozuvi */}
 				<img
 					src="/images/watch-trailer.png"
 					alt="trailer"
