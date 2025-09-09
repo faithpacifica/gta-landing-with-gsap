@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const FirstVideo = () => {
+  // The `useRef` hook is used primarily to store a mutable object which does not cause re-renders when changed. This makes it suitable for storing references to DOM elements, like video elements in this context.
 	const videoRef = useRef(null); // Create a ref for the video element
 
 	useGSAP(() => {
@@ -31,9 +32,9 @@ const FirstVideo = () => {
 				{
 					currentTime: videoRef.current.duration,
 					ease: 'power1.inOut',
-					duration: 5,
+					duration: 3,
 				},
-				'>'
+				'<'
 			); // '<' means start at the same time as previous animation
 		};
 	}, []);
