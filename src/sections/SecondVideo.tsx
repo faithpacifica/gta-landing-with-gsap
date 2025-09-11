@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const SecondVideo = () => {
-	const videoRef = useRef(null);
+	const videoRef = useRef<HTMLVideoElement>(null);
 
 	useGSAP(() => {
 		gsap.set('.lucia', { marginTop: ' -60px', opacity: 0 });
@@ -12,7 +12,7 @@ const SecondVideo = () => {
 			scrollTrigger: {
 				trigger: '.lucia',
 				start: 'top top',
-				end: 'bottom top',
+				end: 'bottom top',//when the bottom of lucia section reaches the top of the viewport
 				scrub: 2,
 				pin: true,
 			},
