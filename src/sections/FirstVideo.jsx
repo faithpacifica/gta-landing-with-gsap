@@ -40,7 +40,7 @@ const FirstVideo = () => {
 	}, []);
 
 	return (
-		<section className="first-vd-wrapper">
+		<section className="first-vd-wrapper pt-10">
 			<div className="h-dvh">
 				<video
 					ref={videoRef}
